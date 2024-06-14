@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playlist Duration</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Playlist Duration</h1>
+        <form method="POST">
+            <label for="playlist_url">Playlist URL:</label>
+            <input type="text" id="playlist_url" name="playlist_url" required>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if duration is not none %}
+        <div class="result">
+            <h2>Total Duration: {{ duration }} seconds</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
